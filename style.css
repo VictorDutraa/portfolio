@@ -1,0 +1,972 @@
+/* fonte: raleway
+    font-family: "Raleway", sans-serif;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --transparente: rgba(255, 0, 0, 0);
+    --font-family-padrao: "Raleway", sans-serif;
+    --font-weight-padrao: 600;
+    --font-weight-destaque: bold;
+    --borda-minha-foto: var(--tema);
+    --tema: #2A7AE4;
+    --sobre-mim-bg-color: #EAF2FD;
+    --hover-color: #696d74;
+    --quadrados-color: rgb(255, 255, 255);
+    --cor-principal-bg: #EDEDED;
+    --cor-fonte-demo: white;
+    --altura-decodificador: 455px;
+    --largura-decodificador: 924px;
+    --altura-devlinks: 582px;
+    --largura-devlinks: 916px;
+    --altura-porfolio: 461px;
+    --largura-porfolio: 800px;
+    --altura-pacman: 474px;
+    --largura-pacman: 759px;
+}
+
+body {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+     */
+    overflow-x: hidden;
+
+    background-color: var(--cor-principal-bg);
+    font-family: var(--font-family-padrao);
+}
+
+/* HEADER------- */
+/* tamanho */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+    /* gap: 15rem; */
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+button {
+    border: 0;
+    background-color: var(--transparente);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+
+header button {
+    font-family: var(--font-family-padrao);
+    font-weight: var(--font-weight-padrao);
+    font-size: 1rem;
+}
+
+header button:hover{
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+.contato{
+    font-weight: var(--font-weight-destaque);
+}
+
+.logo-home{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin-left: 1rem;
+    font-weight: var(--font-weight-destaque);
+}
+
+/* MAIN----------- */
+
+
+/* tamanho */
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* tamanho */
+.secao-sobre-mim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+     /* margin-top: 0.5rem; */
+}
+
+/* tamanho */
+.primeira-impressao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    /* gap: 0.5rem; */
+    /* height: 40vh; */
+    width: 70%;
+
+    img {
+        border-radius: 200px;
+        border: 2px solid var(--borda-minha-foto);
+        height: 250px;
+    }
+}
+
+.sobre-mim-longo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--sobre-mim-bg-color);
+    width: 100vw;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    h2{
+        font-size: 2rem;
+        font-weight: var(--font-weight-destaque);
+        display: flex;
+        align-self: auto;
+        margin-top: 3rem;
+    }
+    p{
+        margin-bottom: 3rem;
+    }
+    
+}
+
+.titulo-e-sobremim{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* width: 100vw; */
+    height: 49%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 70%;
+    /* border: 2px solid green; */
+}
+
+/* tamanho */
+.resumo {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* tamanho */
+h1{
+    font-weight: var(--font-weight-destaque);
+    font-size: 3rem;
+}
+
+/* tamanho */
+.frase-titulo{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-destaque);
+}
+
+/* tamanho */
+.breve-descricao {
+    width: 70%;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+
+.links {
+    display: flex;
+    gap: 1rem;
+}
+
+.links button:hover{
+    cursor: pointer;
+}
+
+.links button{
+    display: flex;
+    flex-direction: row;
+    align-items: self-end;
+    gap: 0.2rem;
+    font-family: var(--font-family-padrao);
+    font-weight: var(--font-weight-padrao);
+    font-size: 1.2rem;
+    font-style: normal;
+    padding:  0;
+}
+
+.sempre{
+    display: none;
+}
+
+
+
+/* parte do hover */
+.primeira-impressao:hover{
+    .as-vezes{
+        display: none;
+    }
+    .sempre{
+        display: flex;
+    }
+}
+
+.frase-titulo .as-vezes {
+    display: flex;
+}
+
+.frase-titulo.hovered .sempre {
+    display: flex;
+}
+
+.frase-titulo.hovered .as-vezes {
+    display: none;
+}
+
+/* SKILSSSSSSSSSS */
+.secao-skills{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap-reverse;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--cor-principal-bg);
+    
+    h1{
+        margin-top: 2rem;
+        font-weight: var(--font-weight-destaque);
+        font-size: 2rem;
+    }
+}
+.secao-skills span {
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--quadrados-color);
+    width: 250px;
+    height: 250px;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    font-size: 2.5rem;
+    gap: 0.5rem;
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+.linha1-skills {
+    display: flex;
+    gap: 10rem;
+}
+
+.linha2-skills {
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 2rem;
+}
+
+.skills-nomes{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.html:hover{
+    color: #ec6432;
+}
+
+.css:hover{
+    color: #0085c6;
+}
+
+.javascript:hover{
+    color: #eab430;
+}
+
+.git:hover{
+    color: #f05033;
+}
+
+.github-skills:hover{
+    color: purple;
+}
+
+.c-language:hover{
+    color: #004482;
+}
+
+
+/* FORMACOESSSSS */
+
+.ufes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.desc-ufes{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    h2{
+        font-weight: var(--font-weight-destaque);
+    }
+}
+
+.alura-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.desc-alura{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    h2{
+        font-weight: var(--font-weight-destaque);
+    }
+}
+
+.logo-ufes{
+    width: 160px;
+    height: 213px;
+}
+
+.logo-alura{
+    width: 160px;
+    height: 90px;
+}
+
+.secao-formacao{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap-reverse;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--sobre-mim-bg-color);
+    
+    h1{
+        margin-top: 2rem;
+        font-weight: var(--font-weight-destaque);
+        font-size: 2rem;
+    }
+}
+.secao-formacao span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--quadrados-color);
+    width: 410px;
+    height: 250px;
+    font-size: 2.5rem;
+    gap: 0.5rem;
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+.formacoes {
+    display: flex;
+    gap: 18rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+
+/* experienciassssssss */
+
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.secao-projetos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap-reverse;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--cor-principal-bg);
+    
+    h1{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-weight: var(--font-weight-destaque);
+        font-size: 2rem;
+    }
+}
+
+.secao-projetos img{
+    box-shadow: 4px 4px 4px rgb(131, 124, 124);
+}
+
+.projeto-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.desc-projeto{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    h2{
+        font-weight: var(--font-weight-destaque);
+    }
+}
+
+.repo  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-principal-bg);
+    border: 1px solid var(--tema);
+    width: 120px;
+    height: 50px;
+    font-size: 1rem;
+    gap: 0.5rem;
+    color: var(--tema);
+    
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+.demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tema);
+    width: 122px;
+    height: 52px;
+    font-size: 1rem;
+    gap: 0.5rem;
+   
+    color: var(--cor-fonte-demo);
+    
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+.botoes-repo-demo{
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* PROJETO 1 */
+.projeto1 {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 10rem;
+}
+
+.imagem-decodificador {
+    width: var(--largura-decodificador);
+    height: var(--altura-decodificador);
+}
+
+/* PROJETO 2 */
+.projeto2 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-bottom: 10rem;
+}
+
+.imagem-devlinks {
+    width: var(--largura-devlinks);
+    height: var(--altura-devlinks);
+}
+
+/* PROJETO 3 */
+.projeto3 {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.imagem-portfolio1{
+    width: var(--largura-porfolio);
+    height: var(--altura-porfolio);
+}
+
+/* PROJETO 4 */
+.projeto4 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.imagem-pacman{
+    width: var(--largura-pacman);
+    height: var(--altura-pacman);
+}
+
+/* contato */
+.secao-contato{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.botao-contato  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-principal-bg);
+    border: 1px solid var(--tema);
+    width: 250px;
+    height: 70px;
+    font-size: 1.3rem;
+    gap: 0.5rem;
+    color: var(--tema);
+    font-weight: var(--font-weight-destaque);
+    h3{
+        font-size: 1.5rem;
+    }
+}
+
+.botao-contato:hover{
+    cursor: pointer;
+}
+
+/* ===========RESPONSIVIDADE================== */
+@media(max-width: 1270px){
+
+    .resumo h1{
+        font-size: 2.5rem;
+    }
+    .projeto1, .projeto2, .projeto3, .projeto4{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 1160px){
+    .resumo h1{
+        font-size: 2rem;
+    }
+    .menu{
+        gap: 0.5rem;
+    }
+
+    .linha1-skills, .linha2-skills {
+        gap: 1rem;
+    }
+
+    .formacoes{
+        gap: 1rem;
+    }
+}
+
+@media(max-width: 972px){
+    /* body{
+        width: 100vw;
+    } */
+    section {
+        width: 100vw;
+    }
+    .secao-projetos{
+        width: 100vw;
+    }
+    .secao-projetos img{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .projeto1, .projeto2, .projeto3, .projeto4{
+        width: 656px;
+        align-items: center;
+    }
+
+    .projeto-container{
+        align-self: flex-start;
+    }
+
+    .primeira-impressao{
+        h1{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+        .frase-titulo{
+            font-size: 1.2rem;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+        }
+    }
+
+}
+
+@media(max-width: 902px){
+    .sobre-mim, .projetos, .skills, .formacao{
+        display: none;
+    }
+
+}
+
+@media(max-width: 868px){
+    /* parei em diminuir a fonte de tudo do primeira impressao topo do site */
+    .logo-home{
+        *{
+            font-size: 1.5rem;
+        }
+    }
+    
+    .resumo p{
+        font-size: 1rem;
+    }
+
+    .links button{
+        font-size: 1rem;
+    }
+
+    .primeira-impressao img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .sobre-mim-longo h2{
+        font-size: 1.5rem;
+    }
+
+    .sobre-mim-longo p{
+        font-size: 1rem;
+    }
+
+    .linha1-skills{
+        gap: 0.5rem;
+    }
+
+    .linha2-skills{
+        gap: 0.5rem;
+    }
+
+    .linha1-skills span{
+        width: 180px;
+        height: 150px;
+    }
+
+    .linha2-skills span{
+        width: 180px;
+        height: 150px;
+    }
+
+    .formacoes span{
+        width: 300px;
+        height: 200px;
+    }
+
+    .formacoes {
+        gap: 1rem;
+    }
+
+    .logo-ufes{
+        height: 180px;
+        width: 140px;
+    }
+
+    .ufes-container h2, p{
+        font-size: 0.9rem;
+    }
+
+    .alura-container h2, p{
+        font-size: 0.9rem;
+    }
+
+    .projeto1, .projeto2, .projeto3, .projeto4 {
+        width: 80%;
+    }
+}
+
+@media(max-width: 822px){
+    .primeira-impressao {
+        h1{
+            font-size: 2rem;
+        }
+        .frase-titulo{
+            font-size: 1rem;
+        }
+    }
+}
+
+@media(max-width: 642px){
+
+    .primeira-impressao{
+        width: 75%;
+    }
+
+    .titulo-main h1{
+        font-size: 1.5rem;
+    }
+
+    .titulo-main > p:first-of-type{
+        font-size: 0.9rem;
+    } 
+
+    .linha1-skills, .linha2-skills{
+
+        span h2{
+            font-size: 1.2rem;
+        }
+        span{
+        
+            align-items: end;
+
+
+            height: 100px;
+            width: 150px;
+            font-size: 1rem;
+        }
+    }
+    
+    .formacoes span{
+        width: 250px;
+        height: 150px;
+    }   
+
+    .formacoes h2{
+        font-size: 0.8rem;
+    }
+    .logo-ufes{
+        height: 100px;
+        width: 80px;
+    }
+    .logo-alura{
+        height: 50px;
+        width: 80px;
+    }
+}
+
+@media(max-width: 566px){
+    .primeira-impressao{
+        width: 85%;
+    }
+}
+
+@media(max-width: 530px){
+    .logo-home{
+        *{
+            font-size: 1rem;
+        }
+    }
+
+    header{
+        align-items: center;
+    }
+    .primeira-impressao{
+        flex-direction: column-reverse;
+        gap: 0.5rem;
+        margin-bottom: 3rem;
+
+        img{
+            margin-top: 4rem;
+            height: 100px;
+            width: 100px;
+        }
+
+        h1{
+            font-size: 1.2rem;
+        }
+
+        .frase-titulo {
+            font-size:0.9rem;
+        }
+
+    }
+
+    .resumo{
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        p{
+        
+            font-size: 0.92rem;
+            
+        }
+    }
+
+    .breve-descricao{
+        width: 100%;
+       
+    }
+
+    .linha1-skills, .linha2-skills{
+        flex-direction: column;
+    }
+
+    .skills-container{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* .secao-skills{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        h1{
+            align-self:center;
+        }
+    } */
+
+    .linha2-skills{
+        margin: 0;
+    }
+
+    .formacoes {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 400px){
+    .contato{
+        display: none;
+
+    }
+    body{
+        
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 1rem;
+               
+    }
+    .secao-formacao{
+        margin: auto;
+        width: 100%;
+        
+    }
+    .secao-skills{
+        margin-left: 1rem;
+    }
+
+    .breve-descricao{
+        width: 90%;
+    }
+
+    .primeira-impressao{
+        img{
+            margin-top: 0;
+        }
+        padding-top: 0;
+    }
+   
+    header{
+        margin-top: 3rem;
+        
+    }
+
+    .logo-home{
+        margin: auto;
+        *{
+            font-size: 0.9rem;
+        }
+        p{
+            word-wrap: break-word;
+        }
+    }
+    
+    .contato{
+        font-size: 0.8rem;
+    }
+    .resumo{
+       
+        justify-content: center;
+        width: 95vw;
+        h1{
+            font-size: 1rem;
+        }
+        .frase-titulo{
+            font-size: 0.8rem;
+        }
+    }
+    
+    .linha1-skills, .linha2-skills{
+
+        span h2{
+            font-size: 1rem;
+        }
+        span{
+        
+            align-items: end;
+
+
+            height: 80px;
+            width: 120px;
+            font-size: 1rem;
+        }
+    }
+
+    .secao-skills h1{
+        font-size: 1.5rem;
+    }
+
+    .secao-formacao h1{
+        font-size: 1.5rem;
+    }
+
+    .sobre-mim-longo{
+        width: auto;
+        margin: auto;
+        
+    }
+
+    .titulo-e-sobremim{
+        
+        h2{
+            margin-top: 1rem;
+        }    
+        p{
+            margin-bottom: 1rem;
+        }
+    }
+
+    .projeto1, .projeto2, .projeto3, .projeto4{
+        margin: 0;
+    }
+    
+    .projeto4{
+        margin-bottom: 5rem;
+    }
+
+    .secao-projetos{
+        h1{
+            margin-bottom: 0;
+        }
+        gap: 5rem;
+    }
+
+     /* .secao-projetos, .secao-skills, .secao-sobre-mim{
+    
+       display: none;
+        
+    } */
+
+}
