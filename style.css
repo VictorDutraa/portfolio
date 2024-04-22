@@ -39,7 +39,6 @@ body {
 }
 
 /* HEADER------- */
-/* tamanho */
 header {
     display: flex;
     flex-direction: row;
@@ -48,6 +47,7 @@ header {
     /* gap: 15rem; */
     height: 3rem;
     font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 button {
@@ -86,9 +86,6 @@ header button:hover{
 }
 
 /* MAIN----------- */
-
-
-/* tamanho */
 main{
     width: 100%;
     display: flex;
@@ -97,7 +94,6 @@ main{
     justify-content: center;
 }
 
-/* tamanho */
 .secao-sobre-mim{
     display: flex;
     flex-direction: column;
@@ -107,7 +103,6 @@ main{
      /* margin-top: 0.5rem; */
 }
 
-/* tamanho */
 .primeira-impressao{
     display: flex;
     align-items: center;
@@ -158,7 +153,6 @@ main{
     /* border: 2px solid green; */
 }
 
-/* tamanho */
 .resumo {
     width: 70%;
     display: flex;
@@ -167,13 +161,11 @@ main{
     gap: 1.5rem;
 }
 
-/* tamanho */
 h1{
     font-weight: var(--font-weight-destaque);
     font-size: 3rem;
 }
 
-/* tamanho */
 .frase-titulo{
     display: flex;
     gap: 0.5rem;
@@ -181,7 +173,7 @@ h1{
     font-weight: var(--font-weight-destaque);
 }
 
-/* tamanho */
+
 .breve-descricao {
     width: 70%;
     font-weight: 500;
@@ -218,7 +210,7 @@ h1{
 
 
 /* parte do hover */
-.primeira-impressao:hover{
+body:hover{
     .as-vezes{
         display: none;
     }
@@ -227,17 +219,6 @@ h1{
     }
 }
 
-.frase-titulo .as-vezes {
-    display: flex;
-}
-
-.frase-titulo.hovered .sempre {
-    display: flex;
-}
-
-.frase-titulo.hovered .as-vezes {
-    display: none;
-}
 
 /* SKILSSSSSSSSSS */
 .secao-skills{
