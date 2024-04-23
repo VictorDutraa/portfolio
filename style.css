@@ -27,6 +27,10 @@
     --largura-pacman: 759px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* display: flex;
     flex-direction: column;
@@ -978,6 +982,4 @@ body:hover{
 
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
