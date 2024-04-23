@@ -20,16 +20,25 @@
     <!-- headerrrrrr -->
     <header>
         
-        <div class="logo-home">
+        <div id="logo-redirect" class="logo-home">
             <ion-icon class="infinito" name="infinite-outline"></ion-icon>
             <p class="meu-nome-header">Victor Dutra</p>
         </div>
         
         <nav class="menu">
-            <button class="sobre-mim">Sobre mim</button>
-            <button class="projetos">Projetos</button>
-            <button class="skills">Skills</button>
-            <button class="formacao">Formação</button>
+            <!-- <button href="" class="sobre-mim">Sobre mim</button> -->
+            <button class="skills">
+                 <a href="./index.html#skills-redirect">Skills</a>
+            </button>
+
+            <button class="formacao">
+                <a href="./index.html#formacao-redirect">Formação</a>
+            </button>
+
+            <button class="projetos">
+                <a href="/index.html#projetos-redirect">Projetos</a>
+            </button>
+
             <button class="contato">victor.d.jesus@edu.ufes.br</p>
         </nav>
 
@@ -101,7 +110,7 @@
         </section>
     </main>
  
-    <section class="secao-skills">
+    <section id="skills-redirect" class="secao-skills">
         <h1 class="skills-titulo">Skills</h1>
 
         <div class="skills-container">
@@ -159,7 +168,7 @@
         
     </section>
 
-    <section class="secao-formacao">
+    <section id="formacao-redirect" class="secao-formacao">
         <h1 class="formacao-titulo">Formação e cursos</h1>
         
         <div class="formacoes">
@@ -194,7 +203,7 @@
         
     </section>
 
-    <section class="secao-projetos">
+    <section id="projetos-redirect" class="secao-projetos">
         <h1 class="projetos-titulo">Projetos</h1>
         
         <!-- PROJETO 1 -->
@@ -326,6 +335,13 @@
         <button class="botao-contato" id="btnEnviarEmail">
             <ion-icon name="mail-outline"></ion-icon>
             Contato via E-mail
+        </button>
+
+        <button class="botao-home" >
+            <a href="./index.html#logo-redirect">
+                <ion-icon name="home-outline"></ion-icon>
+                Home
+            </a>
         </button>
                 
     </section>

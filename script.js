@@ -43,5 +43,10 @@ document.querySelector('.sobre-mim-longo').addEventListener('mouseleave', functi
 });
 
 document.getElementById('btnEnviarEmail').addEventListener('click', function() {
-    window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&source=mailto&to=victor.d.jesus@edu.ufes.br');
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.open('mailto:victor.d.jesus@edu.ufes.br');
+    } else {
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&source=mailto&to=victor.d.jesus@edu.ufes.br');
+    }
 });
+
